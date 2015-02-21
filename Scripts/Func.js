@@ -45,10 +45,10 @@ var iframe = {
     },
     OnLoad: function() {
         iframe.BloquearTodas();
-        iframe.Liberar();
+        iframe.LiberarReservadas();
 
     },
-    Liberar: function() {
+    LiberarReservadas: function() {
 
 
         $(iframe.mesasLiberadas).map(function() {
