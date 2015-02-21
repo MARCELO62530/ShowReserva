@@ -40,11 +40,13 @@ var iframe = {
     mesasLiberadas: Ajax("Mapa/Default.aspx/BuscaMesaReservada"),
 
     frame:$("#iframeMapa").contents(),
-    Bloquear: function() {
+    BloquearTodas: function() {
         iframe.frame.find("li>a").addClass("block");
     },
     OnLoad: function() {
-        iframe.Bloquear();
+        iframe.BloquearTodas();
+        iframe.Liberar();
+
     },
     Liberar: function() {
 
