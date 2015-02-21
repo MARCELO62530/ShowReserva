@@ -1,11 +1,11 @@
-﻿function Ajax(PaginaMetodo, parametro, msgUsuario, async) {
+﻿function Ajax(paginaMetodo, parametro, msgUsuario, async) {
 
     async = async == undefined ? false : async;
     var saida;
 
     $.ajax({
         type: "POST",
-        url: PaginaMetodo,
+        url: paginaMetodo,
         data: '{"list":"' + parametro + '"}',
         global: false,
         contentType: "application/json; charset=utf-8",
@@ -32,29 +32,32 @@
     }); //ajax
     return saida;
 }
+
+
+//#region IframeModel
+
 var iframe = {
-    bloquear: function () {
-        $("#iframeMapa").contents().find('li>a').addClass('block');
+    mesasLiberadas: Ajax("Mapa/Default.aspx/BuscaMesaReservada"),
+
+    frame:$("#iframeMapa").contents(),
+    Bloquear: function() {
+        iframe.frame.find("li>a").addClass("block");
+    },
+    OnLoad: function() {
+        iframe.Bloquear();
+    },
+    Liberar: function() {
+
+
+        $(iframe.mesasLiberadas).map(function() {
+            return iframe.frame.find("#airplane>li>a[title='"+this.Descricao+"']").removeClass("block");
+
+        });
     }
-};
+}
 
 
-var frame = document.getElementById("iframeMapa");
-frame.onre
-
-frame.onload = function () {
-    alert()
-    console.log($(frame).contents().find('#airplane'))
-};
-
-//$(document).ready(function () {
-
-//    iframe.bloquear();
-//    //seleciona os reservados
-//    var lst = Ajax('Mapa/Default.aspx/BuscaMesaReservada');
-//    var airplan = $('#iframeMapa').contents().find('#airplane');
-//    $(lst).map(function () {
-//        return $(airplan).find('li>a[title="' + this.Descricao + '"]').removeClass('block');
-
-//    });
-//});
+////#endregion
+//window.onload = function () {
+//    iframe.OnLoad();
+//}

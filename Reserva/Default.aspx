@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>ShowinFlashBack | Um Show in flash Back | SantanaInfor</title>
+     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="../Content/Home/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/Responsive.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
@@ -122,7 +123,7 @@
 
 
 
-                        <iframe src="mapa/default.aspx" class="col-md-12" id="iframeMapa" style="height: 680px; overflow: hidden; width: 100%"></iframe>
+                        <iframe onload="$(document).ready(function() {iframe.OnLoad();});" src="mapa/default.aspx" class="col-md-12" id="iframeMapa" style="height: 680px; overflow: hidden; width: 100%"></iframe>
                         <span style="-ms-border-radius: 20px; border-radius: 20px; float: right; width: 100%;" class="btn btn-success btn-lg col-sm-12" onclick=" $($('div[data-step=4]')[0]).click(); "><i class="glyphicon glyphicon-ok"></i>Finalizar >></span>
                     </div>
                 </div>
@@ -361,7 +362,7 @@
 
 
         </script>
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
     <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
     <script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>  
    
