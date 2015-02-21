@@ -1,0 +1,422 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* =Basic HTML
+----------------------------------------------------------------------*/
+
+a
+{
+	text-decoration: none;
+}
+
+body
+{
+	background: #f9f9f9 url(../img/body.gif) repeat-x;
+	color: #666;
+	font: 10px Arial, sans-serif;
+}
+
+p
+{
+	margin: 0 0 15px;
+	
+}
+
+input.button
+{
+	background: #fff;
+	border-color: #ddd #999 #666 #ccc;
+	border-style: solid;
+	border-width: 2px;
+	color: #000;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	overflow: visible;
+	padding: 4px 3px 3px;
+	text-transform: uppercase;
+	width: auto;
+}
+
+/* =Logo + Info
+----------------------------------------------------------------------*/
+
+#logo
+{
+	display: block;
+	float: left;
+	margin: 0 0 10px;
+}
+
+#info
+{
+	display: block;
+	float: right;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#info strong
+{
+	font-size: 18px;
+}
+
+/* =Container
+----------------------------------------------------------------------*/
+
+#container
+{   width: 50%;
+    margin: 0 auto;
+  margin-left: 105px;
+	
+
+}
+
+/* =Airplane
+----------------------------------------------------------------------*/
+
+#airplane
+{
+	background: url(../mapa.jpg) no-repeat;
+	clear: both;
+	font-size: 0;
+	margin: 0 0 0 0;
+	overflow: hidden;
+	position: relative;
+	width: 1133px;
+	height: 659px;
+    top: -10px;
+    left: -102px;
+}
+
+#airplane a
+{
+	background-image: url(../img/seat.gif);
+	background-repeat: no-repeat;
+	display: block;
+	overflow: hidden;
+	text-indent: -99999px;
+	width: 34px;
+	height: 34px;
+	background-position: -33px 0;
+}
+
+#airplane a:hover,
+#airplane a:focus
+{
+	background-position: -66px 0;
+}
+
+#airplane a.selected,
+#airplane a.selected:hover
+{
+	background-position: -66px 0;
+}
+
+
+#airplane a.block,
+#airplane a.block:hover
+{
+	background-position: -0px 0;
+}
+
+
+
+#airplane li
+{
+	list-style: none;
+	position: absolute;
+	visibility: hidden;
+	width: 30px;
+	height: 30px;
+}
+
+#airplane li#master
+{
+	font-size: 20px;
+	overflow: visible;
+	top: 10px;
+	left: 10px;
+	width: auto;
+	height: auto;
+}
+
+#airplane input
+{
+	vertical-align: middle;
+}
+
+#airplane label
+{
+	font-weight: bold;
+}
+
+/* =Airplane - Seat Letters
+----------------------------------------------------------------------*/
+
+#airplane .T1
+{
+	top: 128px;
+}
+
+#airplane .T2
+{
+	top: 200px;
+}
+
+#airplane .T3
+{
+	top: 272px;
+}
+
+#airplane .T4
+{
+	top: 342px;
+}
+
+#airplane .T5
+{
+	top: 410px;
+}
+
+#airplane .T6
+{
+	top: 480px;
+}
+#airplane .T7
+{
+	top: 550px;
+}
+#airplane .T8
+{
+	top: 620px;
+}
+
+/* =Airplane - LFT
+----------------------------------------------------------------------*/
+
+#airplane .L1
+{
+	left: 58px;
+}
+
+#airplane .L2
+{
+	left: 113px;
+}
+
+#airplane .L3
+{
+	left: 168px;
+}
+
+#airplane .L4
+{
+	left: 224px;
+}
+
+#airplane .L5
+{
+	left: 280px;
+}
+
+#airplane .L6
+{
+	left: 334px;
+}
+
+#airplane .L7
+{
+	left: 387px;
+}
+#airplane .L8
+{
+	left: 442px;
+}
+
+#airplane .L9
+{
+	left: 495px;
+}
+#airplane .L10
+{
+	left: 549px;
+}
+#airplane .L11
+{
+	left: 603px;
+}
+#airplane .L12
+{
+	left: 658px;
+}
+
+#airplane .L13
+{
+	left: 715px;
+}
+#airplane .L14
+{
+	left: 768px;
+}
+#airplane .L15
+{
+	left: 823px;
+}
+#airplane .L16
+{
+	left: 880px;
+}
+
+#airplane .L17
+{
+	left: 935px;
+}
+#airplane .L18
+{
+	left: 987px;
+}
+
+
+
+
+
+
+
+
+
+/* =Tabbed List
+----------------------------------------------------------------------*/
+
+#tabs
+{
+	display: none;
+	list-style: none;
+}
+
+#tabs a
+{
+	color: #00f;
+	display: block;
+	padding: 5px 0;
+	text-align: center;
+	width: 26px;
+}
+
+#tabs a:hover,
+#tabs a:focus
+{
+	background: #ddd;
+	text-decoration: underline;
+}
+
+#tabs a.selected
+{
+	background: #036;
+	color: #fff;
+	font-weight: bold;
+}
+
+#tabs li
+{
+	display: block;
+	float: left;
+	padding: 0 0 5px;
+	width: 26px;
+}
+
+/* =Passenger Details
+----------------------------------------------------------------------*/
+
+#passenger_details,
+#passenger_details th,
+#passenger_details td
+{
+	border-color: #bbb;
+	border-style: solid;
+}
+
+#passenger_details
+{
+	border-width: 0 1px 1px 0;
+	clear: both;
+	margin: 0 0 15px;
+	width: 650px;
+}
+
+#passenger_details th,
+#passenger_details td
+{
+	border-width: 1px 0 0 1px;
+	padding: 10px;
+	text-align: left;
+}
+
+#passenger_details th
+{
+	background: #fff;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+#passenger_details tr.selected td
+{
+	background: #ff9;
+	color: #000;
+}
+
+#passenger_details label
+{
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+#passenger_details input,
+#passenger_details select
+{
+	font: 10px Arial, sans-serif;
+	width: 75px;
+	
+}
+
+/* =Footer
+----------------------------------------------------------------------*/
+
+#footer
+{
+	
+	color: #999;
+	letter-spacing: 1px;
+
+	text-align: left;
+	text-transform: uppercase;
+	width: 742px;
+	top:711px;
+	
+
+	clear: both;
+
+	
+	overflow: hidden;
+	position: absolute;
+	
+  
+    left: 0px !important;
+}
+
+#footer a
+{
+	color:Red;
+}
+
+#footer a:hover
+{
+	color: #333;
+}
